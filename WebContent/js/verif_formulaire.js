@@ -83,7 +83,7 @@ function isSame(inputElt) {
 	return false;
 }
 
-function longueurMin() {
+function longueurMin(nombre) {
 	let inputMessage = document.getElementById('message');
 	let stringMessage = inputMessage.value;
 	document.getElementById("errorl_message").style.visibility = 'hidden';
@@ -95,6 +95,19 @@ function longueurMin() {
 	}
 	return false;
 }
+
+
+function verifier(){
+	if (isEmpty(document.getElementById('name'))){
+		return false;
+	}
+	
+	if (isEmpty(document.getElementById('name'))){
+		return false;
+	}
+}
+
+
 
 
 
