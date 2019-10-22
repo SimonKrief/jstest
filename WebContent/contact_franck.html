@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>contact</title>
+<script type="text/javascript" src="js/verif_formulaire.js"></script>
+<style type="text/css">
+#contact{
+	border: 1px solid blue;
+	background-color: #ccccff;
+	width: 60%;
+	margin: auto;
+
+}
+h6{
+	text-align: center;
+}
+
+div > div{
+	margin-left: 250px;
+	margin-bottom: 10px;
+}
+label{
+	display:inline-block;
+	width: 50px;
+}
+.title{
+	color: blue;
+	font-family: sans-serif;
+	font-size:large;
+}
+.error{
+	color: red;
+	visibility: hidden;
+}
+</style>
+</head>
+<body>
+<form id="formId">
+<div id="contact">
+	<h6 class="title">Contact</h6>
+	<div>
+		<label for="name">Name </label>
+		<input name="name" id="name" placeholder="Nom prénom" class="blur"/>
+		<span id="error_name" class="error">
+		</span>
+	</div>
+	<div>
+		<label for="email1">Email </label>
+		<input name="email1" id="email1" placeholder="Email"  class="blur"/>
+		<span id="error_email1" class="error">
+		</span>
+	</div>
+	<div>
+		<label for="email2">Email </label>
+		<input name="email2" id="email2" placeholder="Répétez votre email" />
+		<span id="error_email2" class="error"></span>
+	</div>
+	<div>
+		<label for="object">Objet </label>
+		<select name="object" id="object">
+			<option>Réclamation</option>
+			<option>Autre</option>
+		</select>
+	</div>
+	<div>
+		<label for="message">Message </label><br>
+		<textarea rows="10" cols="25" id="message" name="message"></textarea>
+		<span id="error_message" class="error"></span>
+	</div>
+	<div>
+		<button type="submit">Envoyer</button>
+	</div>
+</div>
+</form>
+</body>
+</html>

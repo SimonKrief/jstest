@@ -110,5 +110,13 @@ function verifier(){
 
 
 
+		function test() {
+			let elt = document.createElement("h2");
+			let div = document.getElementById("container");
+			div.appendChild(elt);
+			elt.innerText = "hello";
+		}
+
+
 
 

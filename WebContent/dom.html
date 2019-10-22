@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		let cols = ["T1", "T2", "T3"];
+		let commerciaux = ["Gaston", "Adèle"];
+
+		// function test() {
+		// 	let elt = document.createElement("h2");
+		// 	let div = document.getElementById("container");
+		// 	div.appendChild(elt);
+		// 	elt.innerText = "hello";
+		// }
+
+		function ligne() {
+			let lin = document.createElement("tr");
+		}
+
+		function tableau() {
+			let div = document.getElementById("container");
+			let tab = document.createElement("table");
+
+
+			div.appendChild(tab);
+
+			for (i = 0; i <= commerciaux.length; i++) {
+				let row = document.createElement("tr");
+
+				tab.appendChild(row);
+				for (i = 0; i <= cols.length; i++) {
+					let cell = document.createElement("td");
+					row.appendChild(cell);
+					cell.innerHTML = "tunes";
+
+
+				}
+			}
+
+			// tab.appendChild()
+			// tab.innerHTML = "<th>header</th>";
+
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="container">
+
+	</div>
+
+	<button type="button" onclick="tableau()">test</button>
+</body>
+
+</html>

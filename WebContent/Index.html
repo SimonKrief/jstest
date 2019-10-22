@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inscription</title>
+
+</head>
+
+<body>
+	<form>
+		<div>
+			<label for="user">user</label>
+			<input name="user" id="user" placeholder="user">
+		</div>
+
+		<div>
+			<label for="password1">password</label>
+			<input name="password1" id="password1" placeholder="password" class="blur">
+
+		</div>
+		<div>
+			<label for="password2">repeat password</label>
+			<input name="password2" id="password2" placeholder="password" class="blur">
+
+		</div>
+
+		<div id="error" style="visibility: hidden; color: red"> 8 characters dont un chifre au minimum, les mdp doivent être identiques</div>
+
+		<div>
+			<button type="button" onclick="regexcheck()">submit</button>
+		</div>
+
+	</form>
+
+</body>
+	<script type="text/javascript" src="js/verif_inscription.js"></script>
+
+</html>

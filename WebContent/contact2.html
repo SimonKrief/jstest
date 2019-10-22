@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>contact</title>
+	<script type="text/javascript" src="js/verif_formulaire2.js"></script>
+	<style type="text/css">
+		#contact {
+			border: 1px solid blue;
+			background-color: #ccccff;
+			width: 60%;
+			margin: auto;
+
+		}
+
+		h6 {
+			text-align: center;
+		}
+
+		div>div {
+			margin-left: 250px;
+			margin-bottom: 10px;
+		}
+
+		label {
+			display: inline-block;
+			width: 50px;
+		}
+
+		.title {
+			color: blue;
+			font-family: sans-serif;
+			font-size: large;
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<div id="contact">
+			<h6 class="title">Contact</h6>
+			<div>
+				<label for="name">Name </label>
+				<input name="name" id="name" placeholder="Nom prénom" onfocus="testOnFocus()"   class="blur"/> 
+			</div>
+
+			<div id="error_name" style="visibility: hidden; color: red"> le champ nom est obligatoire</div>
+
+
+			<div>
+				<label for="email1">Email </label>
+				<input name="email1" id="email1" placeholder="Email" onblur="isEmpty(this);isSame(this)" class="blur"/>
+			</div>
+
+			<div id="error_email1" style="visibility: hidden; color: red"> les mails ne sont pas identiques</div>
+
+
+			<div>
+				<label for="email2">Email </label>
+				<input name="email2" id="email2" placeholder="Répétez votre email" onblur="isEmpty(this);isSame(this)" class="blur"/>
+			</div>
+
+			<div id="error_email2" style="visibility: hidden; color: red"> les mails ne sont pas identiques</div>
+
+
+			<div>
+				<label for="object">Objet </label>
+				<select name="object" id="object">
+					<option>Réclamation</option>
+					<option>Autre</option>
+				</select>
+			</div>
+			<div>
+				<label for="message">Message </label><br>
+				<textarea rows="10" cols="25" id="message" name="message" onblur="isEmpty(this) ; longueurMin(25)" class="blur"></textarea>
+			</div>
+
+			<div id="error_message" style="visibility: hidden; color: red" > le champ message est obligatoire</div>
+			<div id="errorl_message" style="visibility: hidden; color: red" > le message doit comproter 25 caractères au minimum</div>
+
+
+			<!-- attention si le type nest pas de button, on envoie et donc la page est rafraichie ce qui fait que le duv error n'aparait pas -->
+			<div>
+				<button type="button" onclick="verifier()">Envoyer</button>
+			</div>
+		</div>
+	</form>
+
+
+
+</body>
+
+</html>
